@@ -1,10 +1,41 @@
+# Fastx Exchange
 
-migration:
-Install Atlas from macOS or Linux by running:
-curl -sSf https://atlasgo.sh | sh
+### Pre-requisites
 
-run gen migration:
-atlas migrate diff --env gorm
+- Go >= 1.2
+- PostgreSQL 16
+- Node JS >= 20
+- Redis
+- Docker
+- make
 
-run migrate:
-atlas schema apply --env gorm -u "postgres://dev:fastx123@localhost:5432/fastx?sslmode=disable"
+### Need to install some packages before setting project
+- [Golangci-lint](https://golangci-lint.run/welcome/install/): Used to detect errors and check code style in Go code.
+- [Atlas](https://atlasgo.io/docs):Use Handle for Database Migrations
+- [Air](https://github.com/air-verse/air): Auto reload when code change
+
+### First time setup
+
+- copy .env file from .env.example and then change database configuration
+```sh
+$ cp .env.example .env
+```
+
+### Setup database
+- Run migration
+```sh
+$ make migrate 
+```
+- Create Migration file from Model
+```sh
+$ make diff_migration
+```
+- Create Migration file
+```sh
+$ make create_migration
+```
+
+### Start app
+```sh
+$ make dev
+```
