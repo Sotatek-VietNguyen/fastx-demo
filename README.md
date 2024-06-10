@@ -15,6 +15,11 @@
 - [Air](https://github.com/air-verse/air): Auto reload when code change
 
 ### First time setup
+- install dotenv
+```sh
+$ npm install -g dotenv-cli
+```
+
 
 - copy .env file from .env.example and then change database configuration
 ```sh
