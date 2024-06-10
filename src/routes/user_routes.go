@@ -11,7 +11,7 @@ func InitializeUserRoutes(r *gin.Engine, db *gorm.DB) {
 
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("/users", userController.GetAllUsers)
+		v1.GET("/user", userController.GetAllUsers)
 		// Add more user-related routes here
 	}
 }
