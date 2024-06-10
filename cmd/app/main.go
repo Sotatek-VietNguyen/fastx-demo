@@ -19,12 +19,6 @@ func main() {
 		log.Fatalf("Could not connect to the database: %v", err)
 	}
 
-	// Run seeders
-	//err = seeders.SeedUsers(db)
-	//if err != nil {
-	//	log.Fatalf("Could not seed users: %v", err)
-	//}
-
 	// Set up Gin router
 	r := gin.Default()
 

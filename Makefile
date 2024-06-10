@@ -26,5 +26,8 @@ diff_migration:
 hash_migrations:
 	@dotenv -e .env -- atlas migrate hash --dir file://database/migrations
 
+db-seed:
+	go run cmd/seeder/main.go
+
 dev:
 	air

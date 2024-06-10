@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"fastx-api/src/controllers/user"
+	"fastx-api/src/http/controllers/user"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )

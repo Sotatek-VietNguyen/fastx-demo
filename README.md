@@ -35,6 +35,11 @@ $ make diff_migration
 $ make create_migration
 ```
 
+- Run seed data 
+```sh
+$ make db-seed
+```
+
 ### Start app
 ```sh
 $ make dev

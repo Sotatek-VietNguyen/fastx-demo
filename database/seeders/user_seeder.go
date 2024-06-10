@@ -3,12 +3,17 @@ package seeders
 import (
 	"fastx-api/src/models"
 	"gorm.io/gorm"
+	"log"
 )
 
-func SeedUsers(db *gorm.DB) error {
+type UserSeeder struct {
+	BaseSeeder
+}
+
+func (s *UserSeeder) Seed(db *gorm.DB) error {
 	users := []models.User{
-		{Name: "John Doe", Email: "john@example.com", Password: "password"},
-		{Name: "Jane Doe", Email: "jane@example.com", Password: "password"},
+		{Name: "John Doe", Email: "john@example.com", Password: "123123"},
+		{Name: "Jane Doe", Email: "jane@example.com", Password: "123123"},
 	}
 
 	for _, user := range users {
@@ -17,5 +22,10 @@ func SeedUsers(db *gorm.DB) error {
 		}
 	}
 
+	log.Println("User seeder ran successfully!")
 	return nil
+}
+
+func (s *UserSeeder) TableName() string {
+	return "users"
 }
