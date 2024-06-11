@@ -1,9 +1,9 @@
 package services
 
 import (
-	"fastx-api/user-service/src/models"
-	"fastx-api/user-service/src/repositories"
 	"gorm.io/gorm"
+	"user-service/src/models"
+	"user-service/src/repositories"
 )
 
 type UserService struct {

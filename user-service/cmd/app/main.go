@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fastx-api/user-service/config"
-	"fastx-api/user-service/src/pkg/database"
-	"fastx-api/user-service/src/routes"
 	"github.com/gin-gonic/gin"
 	"log"
 	"os"
+	"user-service/config"
+	"user-service/src/pkg/database"
+	"user-service/src/routes"
 )
 
 func main() {

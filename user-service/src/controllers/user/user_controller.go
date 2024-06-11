@@ -1,10 +1,10 @@
 package user
 
 import (
-	"fastx-api/user-service/src/services"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 	"net/http"
+	"user-service/src/services"
 )
 
 type UserController struct {

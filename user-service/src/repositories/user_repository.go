@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"fastx-api/user-service/src/models"
 	"gorm.io/gorm"
+	"user-service/src/models"
 )
 
 type UserRepository struct {

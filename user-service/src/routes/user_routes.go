@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"fastx-api/user-service/src/controllers/user"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
+	"user-service/src/controllers/user"
 )
 
 func InitializeUserRoutes(r *gin.Engine, db *gorm.DB) {
